@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="bawei.com.zhangduweijingdongproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".zdwapplication.DashApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/dw1"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".zdwview.zdwactivity.MainActivity"/>
+        <activity android:name=".zdwview.zdwactivity.WebViewActivity" />
+        <activity android:name=".zdwview.zdwactivity.DetailActivity" />
+        <activity android:name=".zdwview.zdwactivity.ImageScaleActivity" />
+        <activity android:name=".zdwview.zdwactivity.ProductListActivity" />
+        <activity android:name=".zdwview.zdwactivity.LoginActivity" />
+        <activity android:name=".zdwview.zdwactivity.UserSettingActivity" />
+        <activity android:name=".zdwview.zdwactivity.MyOrderActivity" />
+        <activity android:name=".zdwview.zdwactivity.CartActivity" />
+        <activity android:name=".zdwview.zdwactivity.RegistActivity" />
+        <activity android:name=".zdwview.zdwactivity.CustomCaptrueActivity" />
+
+        <!-- 新浪 -->
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+        <activity android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize">
+
+        </activity>
+        -->
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 微信 -->
+        <activity
+            android:name=".zdwview.zdwactivity.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- qq -->
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5a73de3eb27b0a195c000065" />
+
+        <activity android:name=".zdwview.zdwactivity.UserInfoActivity" />
+        <activity android:name=".zdwview.zdwactivity.MakeSureOrderActivity" />
+        <activity android:name=".zdwview.zdwactivity.OrderListActivity" />
+        <activity android:name=".zdwview.zdwactivity.AddNewAddrActivity" />
+        <activity android:name=".zdwview.zdwactivity.ChooseAddrActivity" />
+        <activity android:name=".zdwview.zdwactivity.ManageAddrActivity" />
+        <activity android:name=".zdwview.zdwactivity.ChooseDistinctActivity" />
+        <activity android:name=".zdwview.zdwactivity.BootPageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
